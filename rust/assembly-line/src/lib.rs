@@ -4,7 +4,7 @@
 
 pub fn production_rate_per_hour(speed: u8) -> f64 {
   speed as f64
-    * 221
+    * 221.0
     * match speed {
       0..=4 => 1.0,
       5..=8 => 0.9,
