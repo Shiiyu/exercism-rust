@@ -14,6 +14,8 @@ pub struct Position(pub i16, pub i16);
 
 impl Position {
   pub fn manhattan(&self) -> i16 {
-    self.0.abs() + self.1.abs()
+    let Position(x, y) = self;
+
+    x.abs() + y.abs()
   }
 }
