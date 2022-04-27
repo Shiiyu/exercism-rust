@@ -16,8 +16,8 @@ pub enum ResistorColor {
   White = 9
 }
 
-pub fn color_to_value(_color: ResistorColor) -> usize {
-  _color as usize
+pub fn color_to_value(color: ResistorColor) -> usize {
+  color as usize
 }
 
 pub fn value_to_color_string(value: usize) -> String {
