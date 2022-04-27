@@ -1,6 +1,5 @@
 /shell
 exercism.exe
-LICENSE
 /rust/**/.exercism
 /rust/**/GETTING_STARTED.md
 /rust/**/HELP.md
