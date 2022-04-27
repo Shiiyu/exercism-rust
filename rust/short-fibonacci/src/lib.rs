@@ -1,6 +1,6 @@
 /// Create an empty vector
 pub fn create_empty() -> Vec<u8> {
-    vec![]
+    Vec::new()
 }
 
 /// Create a buffer of `count` zeroes.
@@ -15,5 +15,14 @@ pub fn create_buffer(count: usize) -> Vec<u8> {
 /// Fibonacci's sequence is the list of numbers where the next number is a sum of the previous two.
 /// Its first five elements are `1, 1, 2, 3, 5`.
 pub fn fibonacci() -> Vec<u8> {
-    vec![1, 1, 2, 3, 5]
+    let mut fibb = create_buffer(5);
+
+    for i in 0..5 {
+        match i {
+            0..=1 => fibb[i] = 1,
+            _ => fibb[i] = fibb[i - 2] + fibb[i - 1],
+        }
+    }
+
+    fibb
 }
