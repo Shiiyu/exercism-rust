@@ -12,7 +12,6 @@ report_fixme = 'Always'
 report_todo = 'Always'
 tab_spaces = 2
 trailing_comma = 'Never'
-unstable_features = true
 use_small_heuristics = 'Max'
 use_field_init_shorthand = true
 use_try_shorthand = true
