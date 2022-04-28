@@ -1,6 +1,7 @@
 pub struct Allergies(u8);
 
 #[derive(Copy, Clone, Debug, PartialEq)]
+#[repr(u8)]
 pub enum Allergen {
   Eggs = 1,
   Peanuts = 2,
