@@ -20,7 +20,7 @@ impl Allergen {
 
 impl Allergies {
   pub fn new(score: u32) -> Self {
-    Allergies(Allergen::ALLERGENS.iter().copied().filter(|allergen| (score & *allergen as u32) != 0).collect())
+    Self(Allergen::ALLERGENS.iter().copied().filter(|allergen| (score & *allergen as u32) != 0).collect())
   }
 
   pub fn is_allergic_to(&self, allergen: &Allergen) -> bool {
