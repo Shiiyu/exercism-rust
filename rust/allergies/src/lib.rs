@@ -14,17 +14,7 @@ pub enum Allergen {
 
 impl Allergen {
   fn from(val: u8) -> Self {
-    match val {
-      1 => Allergen::Eggs,
-      2 => Allergen::Peanuts,
-      4 => Allergen::Shellfish,
-      8 => Allergen::Strawberries,
-      16 => Allergen::Tomatoes,
-      32 => Allergen::Chocolate,
-      64 => Allergen::Pollen,
-      128 => Allergen::Cats,
-      _ => panic!("Invalid Allergen")
-    }
+    unsafe { std::mem::transmute(val) }
   }
 }
 
