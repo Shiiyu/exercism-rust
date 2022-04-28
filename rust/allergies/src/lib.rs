@@ -3,14 +3,14 @@ pub struct Allergies(u8);
 #[derive(Copy, Clone, Debug, PartialEq)]
 #[repr(u8)]
 pub enum Allergen {
-  Eggs = 1,
-  Peanuts = 2,
-  Shellfish = 4,
-  Strawberries = 8,
-  Tomatoes = 16,
-  Chocolate = 32,
-  Pollen = 64,
-  Cats = 128
+  Eggs = 1 << 0,
+  Peanuts = 1 << 1,
+  Shellfish = 1 << 2,
+  Strawberries = 1 << 3,
+  Tomatoes = 1 << 4,
+  Chocolate = 1 << 5,
+  Pollen = 1 << 6,
+  Cats = 1 << 7
 }
 
 impl Allergen {
