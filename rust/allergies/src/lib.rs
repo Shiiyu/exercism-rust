@@ -15,7 +15,7 @@ pub enum Allergen {
 }
 
 impl Allergen {
-  const ALLERGENS: [Allergen; 8] = [Cats, Pollen, Chocolate, Tomatoes, Strawberries, Shellfish, Peanuts, Eggs];
+  const ALLERGENS: [Allergen; 8] = [Eggs, Peanuts, Shellfish, Strawberries, Tomatoes, Chocolate, Pollen, Cats];
 }
 
 impl Allergies {
