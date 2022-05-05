@@ -22,13 +22,6 @@ pub fn nth(n: usize) -> u32 {
         break;
       }
 
-      if multiple * multiple > candidate {
-        primes.push(candidate);
-        candidate += 1;
-
-        break;
-      }
-
       multiple += 6;
     }
   }
