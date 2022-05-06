@@ -4,7 +4,7 @@ const VERSES: [&'static str; 3] = [
   "1 bottle of beer on the wall, 1 bottle of beer.\n\
     Take it down and pass it around, no more bottles of beer on the wall.\n",
   "2 bottles of beer on the wall, 2 bottles of beer.\n\
-    Take one down and pass it around, 1 bottle of beer on the wall.\n"
+    Take one down and pass it around, 1 bottle of beer on the wall.\n",
 ];
 
 pub fn verse(n: u16) -> String {
@@ -17,7 +17,7 @@ pub fn verse(n: u16) -> String {
       Take one down and pass it around, {1} bottles of beer on the wall.\n",
       n,
       n - 1
-    )
+    ),
   }
 }
 

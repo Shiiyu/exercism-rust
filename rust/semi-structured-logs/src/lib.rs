@@ -3,7 +3,7 @@ pub enum LogLevel {
   Info,
   Warning,
   Error,
-  Debug
+  Debug,
 }
 /// primary function for emitting logs
 pub fn log(level: LogLevel, message: &str) -> String {
@@ -11,7 +11,7 @@ pub fn log(level: LogLevel, message: &str) -> String {
     LogLevel::Info => info(message),
     LogLevel::Warning => warn(message),
     LogLevel::Error => error(message),
-    LogLevel::Debug => debug(message)
+    LogLevel::Debug => debug(message),
   }
 }
 

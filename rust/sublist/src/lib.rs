@@ -3,7 +3,7 @@ pub enum Comparison {
   Equal,
   Unequal,
   Sublist,
-  Superlist
+  Superlist,
 }
 
 pub fn sublist<T: Eq>(first_list: &[T], second_list: &[T]) -> Comparison {

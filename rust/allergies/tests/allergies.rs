@@ -99,7 +99,7 @@ fn allergic_to_everything() {
     Allergen::Tomatoes,
     Allergen::Chocolate,
     Allergen::Pollen,
-    Allergen::Cats
+    Allergen::Cats,
   ];
   let allergies = Allergies::new(255).allergies();
 
@@ -115,7 +115,7 @@ fn scores_over_255_do_not_trigger_false_positives() {
     Allergen::Tomatoes,
     Allergen::Chocolate,
     Allergen::Pollen,
-    Allergen::Cats
+    Allergen::Cats,
   ];
   let allergies = Allergies::new(509).allergies();
 
