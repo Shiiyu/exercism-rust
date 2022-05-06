@@ -14,9 +14,9 @@ pub fn evaluate(inputs: &[CalculatorInput]) -> Option<i32> {
   let mut stack = Vec::new();
 
   for input in inputs {
-    match input {
-      CalculatorInput::Value(val) => stack.push(*val),
-      _ => {
+    if let CalculatorInput::Value(val) = input {
+        stack.push(*val)
+    } else {
         if stack.len() < 2 {
           return None;
         }
@@ -32,7 +32,6 @@ pub fn evaluate(inputs: &[CalculatorInput]) -> Option<i32> {
           _ => return None
         }
       }
-    }
   }
 
   if stack.len() != 1 {
