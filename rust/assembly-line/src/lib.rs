@@ -5,7 +5,7 @@ pub fn production_rate_per_hour(speed: u8) -> f64 {
       0..=4 => 1.0,
       5..=8 => 0.9,
       9..=10 => 0.77,
-      _ => unreachable!()
+      _ => unreachable!(),
     }
 }
 

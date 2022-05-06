@@ -8,7 +8,7 @@ fn dt(year: i32, month: u8, day: u8, hour: u8, minute: u8, second: u8) -> DateTi
 
   DateTime::new(
     Date::from_calendar_date(year, month.try_into().unwrap(), day).unwrap(),
-    Time::from_hms(hour, minute, second).unwrap()
+    Time::from_hms(hour, minute, second).unwrap(),
   )
 }
 

@@ -7,7 +7,7 @@ fn calculator_input(s: &str) -> Vec<CalculatorInput> {
       "-" => CalculatorInput::Subtract,
       "*" => CalculatorInput::Multiply,
       "/" => CalculatorInput::Divide,
-      n => CalculatorInput::Value(n.parse().unwrap())
+      n => CalculatorInput::Value(n.parse().unwrap()),
     })
     .collect()
 }

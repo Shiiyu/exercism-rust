@@ -3,7 +3,7 @@ pub enum CalculatorInput {
   Subtract,
   Multiply,
   Divide,
-  Value(i32)
+  Value(i32),
 }
 
 pub fn evaluate(inputs: &[CalculatorInput]) -> Option<i32> {
@@ -29,7 +29,7 @@ pub fn evaluate(inputs: &[CalculatorInput]) -> Option<i32> {
         CalculatorInput::Subtract => stack.push(a - b),
         CalculatorInput::Multiply => stack.push(a * b),
         CalculatorInput::Divide => stack.push(a / b),
-        _ => return None
+        _ => return None,
       }
     }
   }

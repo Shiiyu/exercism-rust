@@ -22,7 +22,7 @@ pub fn fibonacci() -> Vec<u8> {
   for i in 0..5 {
     match i {
       0..=1 => fibb[i] = 1,
-      _ => fibb[i] = fibb[i - 2] + fibb[i - 1]
+      _ => fibb[i] = fibb[i - 2] + fibb[i - 1],
     }
   }
 

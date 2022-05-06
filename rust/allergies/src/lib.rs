@@ -10,7 +10,7 @@ pub enum Allergen {
   Tomatoes = 1 << 4,
   Chocolate = 1 << 5,
   Pollen = 1 << 6,
-  Cats = 1 << 7
+  Cats = 1 << 7,
 }
 
 impl Allergen {
