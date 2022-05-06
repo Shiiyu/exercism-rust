@@ -14,23 +14,22 @@ pub fn evaluate(inputs: &[CalculatorInput]) -> Option<i32> {
   let mut stack = Vec::new();
 
   for input in inputs {
-    match input {
-      CalculatorInput::Value(val) => stack.push(*val),
-      _ => {
-        if stack.len() < 2 {
-          return None;
-        }
+    if let CalculatorInput::Value(val) = input {
+      stack.push(*val)
+    } else {
+      if stack.len() < 2 {
+        return None;
+      }
 
-        let b = stack.pop().unwrap();
-        let a = stack.pop().unwrap();
+      let b = stack.pop().unwrap();
+      let a = stack.pop().unwrap();
 
-        match input {
-          CalculatorInput::Add => stack.push(a + b),
-          CalculatorInput::Subtract => stack.push(a - b),
-          CalculatorInput::Multiply => stack.push(a * b),
-          CalculatorInput::Divide => stack.push(a / b),
-          _ => return None
-        }
+      match input {
+        CalculatorInput::Add => stack.push(a + b),
+        CalculatorInput::Subtract => stack.push(a - b),
+        CalculatorInput::Multiply => stack.push(a * b),
+        CalculatorInput::Divide => stack.push(a / b),
+        _ => return None
       }
     }
   }
