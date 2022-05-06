@@ -1,4 +1,4 @@
-const VERSES: [&'static str; 3] = [
+const VERSES: [&str; 3] = [
   "No more bottles of beer on the wall, no more bottles of beer.\n\
     Go to the store and buy some more, 99 bottles of beer on the wall.\n",
   "1 bottle of beer on the wall, 1 bottle of beer.\n\
