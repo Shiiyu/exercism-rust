@@ -17,10 +17,6 @@ pub fn brackets_are_balanced(string: &str) -> bool {
       openings.pop();
     } else if matches!(bracket, ')' | ']' | '}') {
       return false;
-    } else if !matches!(bracket, '(' | '[' | '{') {
-      continue;
-    } else {
-      return false;
     }
   }
 
