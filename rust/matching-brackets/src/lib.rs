@@ -20,9 +20,5 @@ pub fn brackets_are_balanced(string: &str) -> bool {
     }
   }
 
-  if !openings.is_empty() {
-    return false;
-  }
-
-  true
+  openings.is_empty()
 }
