@@ -1,3 +1,5 @@
+#![feature(array_windows)]
+
 pub fn build_proverb(list: &[&str]) -> String {
   let mut string = String::new();
 
@@ -5,9 +7,7 @@ pub fn build_proverb(list: &[&str]) -> String {
     return string;
   }
 
-  list
-    .windows(2)
-    .for_each(|words| string.push_str(&format!("For want of a {} the {} was lost.\n", words[0], words[1])));
+  list.array_windows().for_each(|[a, b]| string.push_str(&format!("For want of a {} the {} was lost.\n", a, b)));
   string.push_str(&format!("And all for the want of a {}.", list[0]));
 
   string
