@@ -1,6 +1,6 @@
 pub fn nth(n: usize) -> u32 {
-  let mut primes = vec![2, 3];
-  let mut candidate = 4;
+  let mut primes = vec![2, 3, 5, 7];
+  let mut candidate = 8;
 
   while n + 1 > primes.len() {
     if candidate % 2 == 0 || candidate % 3 == 0 {
@@ -13,10 +13,13 @@ pub fn nth(n: usize) -> u32 {
 
     loop {
       if candidate % (multiple - 1) == 0 || candidate % (multiple + 1) == 0 {
-        if !primes.iter().any(|i| candidate % i == 0) {
-          primes.push(candidate);
-        }
+        candidate += 1;
 
+        break;
+      }
+
+      if multiple * multiple > candidate {
+        primes.push(candidate);
         candidate += 1;
 
         break;
@@ -25,6 +28,6 @@ pub fn nth(n: usize) -> u32 {
       multiple += 6;
     }
   }
-
+  println!("{:?}", primes);
   primes[n]
 }
