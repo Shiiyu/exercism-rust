@@ -28,6 +28,6 @@ pub fn nth(n: usize) -> u32 {
       multiple += 6;
     }
   }
-  println!("{:?}", primes);
+
   primes[n]
 }
